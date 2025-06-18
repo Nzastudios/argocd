@@ -3,9 +3,9 @@ appName: myhelmapp
 port: 80
 
 configmap:
-  name: myhelmapp-configmap-v1
+  name: myhelmapp-configmap-v2
   data:
-    CUSTOM_HEADER: 'This app was deployed with helm!'
+    CUSTOM_HEADER: 'Best practice to update configmap using helm!'
 
 image:
   name: devopsjourney1/mywebapp
