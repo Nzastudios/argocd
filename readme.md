@@ -28,11 +28,12 @@ https://youtu.be/JLrR9RV9AFA
 
 # kubectl get all -n dev
 NAME                             READY   STATUS    RESTARTS   AGE
-pod/myhelmapp-7b5fdcd7b5-2p5s4   1/1     Running   0          2m26s
-pod/myhelmapp-7b5fdcd7b5-dtlr7   1/1     Running   0          2m26s
-pod/myhelmapp-7b5fdcd7b5-mrl9z   1/1     Running   0          2m26s
-pod/myhelmapp-7b5fdcd7b5-tp7pc   1/1     Running   0          2m26s
-pod/myhelmapp-7b5fdcd7b5-zspwp   1/1     Running   0          2m26s
+- [x] NAME                             READY   STATUS    RESTARTS   AGE
+- [x] pod/myhelmapp-7b5fdcd7b5-2p5s4   1/1     Running   0          2m26s
+- [x] pod/myhelmapp-7b5fdcd7b5-dtlr7   1/1     Running   0          2m26s
+- [x] pod/myhelmapp-7b5fdcd7b5-mrl9z   1/1     Running   0          2m26s
+- [x] pod/myhelmapp-7b5fdcd7b5-tp7pc   1/1     Running   0          2m26s
+- [x] pod/myhelmapp-7b5fdcd7b5-zspwp   1/1     Running   0          2m26s
 
 NAME                TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
 service/myhelmapp   NodePort   10.101.254.222   <none>        80:31167/TCP   2m26s
