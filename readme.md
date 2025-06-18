@@ -24,8 +24,7 @@ https://youtu.be/JLrR9RV9AFA
 - [x] kubectl port-forward svc/argocd-server -n argocd 8080:443
 - [x] argocd login 127.0.0.1:8080
 
-# Post creation of New webapp in ARGO CD called helm-webapp-dev
-# verify apps service/myhelmapp is running along with the 5 pod replicaset
+# Verify running Pods and Services
 
 # kubectl get all -n dev
 NAME                             READY   STATUS    RESTARTS   AGE
