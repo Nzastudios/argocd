@@ -53,14 +53,25 @@ replicaset.apps/myhelmapp-7b5fdcd7b5   5         5         5       2m27s
 ### kubectl port-forward service/myhelmapp 8888:80 -n dev
 
 # Creating an Application using ArgoCD CLI:
+# Step 1 - kubectl create namespace prod 
 ```
-argocd app create webapp-kustom-prod \
---repo https://github.com/devopsjourney1/argo-examples.git \
+
+argocd app create webapp-kustomize-prod \
+--repo https://github.com/Nzastudios/argocd.git \
 --path kustom-webapp/overlays/prod --dest-server https://kubernetes.default.svc \
 --dest-namespace prod
 ```
 
 # Command Cheat sheet
+
+# Checking out of sync
+# argocd app diff webapp-kustomize-prod
+
+# How to rollback
+- [x] argocd app history webapp-kustomize-prod
+- [x] argocd app rollback webapp-kustomize-prod revision_number
+- [x] argocd app rollback webapp-kustomize-prod 0
+
 ```
 argocd app create #Create a new Argo CD application.
 argocd app list #List all applications in Argo CD.
