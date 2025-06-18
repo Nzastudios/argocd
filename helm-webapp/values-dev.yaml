@@ -2,4 +2,4 @@ replicas: 2
 
 configmap:
   data:
-    CUSTOM_HEADER: 'This is on the DEV environment!'
+    CUSTOM_HEADER: 'This is on the DEV environment with configmap update!'
