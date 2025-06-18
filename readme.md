@@ -5,29 +5,24 @@ https://youtu.be/JLrR9RV9AFA
 
 
 # Installing latest/stable version of ArgoCD
-```
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-```
-## kubectl get all -n argocd
+- [x] kubectl create namespace argocd
+- [x] kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-### Forward Ports
-```
-kubectl get services -n argocd
-kubectl port-forward service/argocd-server -n argocd 8080:443
-```
+- [x] kubectl get all -n argocd
 
-### Get Credentials
-```
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-```
+# Forward Ports
+- [x] kubectl get services -n argocd
+- [x] kubectl port-forward service/argocd-server -n argocd 8080:443
+
+
+# Get Credentials
+- [x] kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
 
 # Install ArgoCD CLI / Login via CLI
-```
-brew install argocd
-kubectl port-forward svc/argocd-server -n argocd 8080:443
-argocd login 127.0.0.1:8080
-```
+- [x] brew install argocd
+- [x] kubectl port-forward svc/argocd-server -n argocd 8080:443
+- [x] argocd login 127.0.0.1:8080
 
 # Post creation of New webapp in ARGO CD called helm-webapp-dev
 # verify apps service/myhelmapp is running along with the 5 pod replicaset
@@ -49,11 +44,11 @@ deployment.apps/myhelmapp   5/5     5            5           2m27s
 NAME                                   DESIRED   CURRENT   READY   AGE
 replicaset.apps/myhelmapp-7b5fdcd7b5   5         5         5       2m27s
 
-### PORT FORWARD TO service/myhelmapp
-### kubectl port-forward service/myhelmapp 8888:80 -n dev
+# PORT FORWARD TO service/myhelmapp
+- [x] kubectl port-forward service/myhelmapp 8888:80 -n dev
 
 # Creating an Application using ArgoCD CLI:
-# Step 1 - kubectl create namespace prod 
+- [x] Step 1 - kubectl create namespace prod 
 ```
 
 argocd app create webapp-kustomize-prod \
@@ -65,7 +60,7 @@ argocd app create webapp-kustomize-prod \
 # Command Cheat sheet
 
 # Checking out of sync
-# argocd app diff webapp-kustomize-prod
+- [x] argocd app diff webapp-kustomize-prod
 
 # How to rollback
 - [x] argocd app history webapp-kustomize-prod
