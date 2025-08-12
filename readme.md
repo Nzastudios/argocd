@@ -63,8 +63,10 @@ argocd app create webapp-kustomize-prod \
 - [x] argocd app diff webapp-kustomize-prod
 
 # Sync the application if a change was made in Repository ( SYNC Set to Manual )
-- [x] argocd app sync argcd/webapp-kustomize-prod
+- [x] argocd app sync argocd/webapp-kustomize-prod
 
+# Confirm the pods reflect the changes of the Sync
+- [x] kubectl get all -n prod
 
 # How to rollback
 - [x] argocd app history webapp-kustomize-prod
