@@ -62,6 +62,10 @@ argocd app create webapp-kustomize-prod \
 # Checking out of sync
 - [x] argocd app diff webapp-kustomize-prod
 
+# Sync the application if a change was made in Repository ( SYNC Set to Manual )
+- [x] argocd app sync argcd/webapp-kustomize-prod
+
+
 # How to rollback
 - [x] argocd app history webapp-kustomize-prod
 - [x] argocd app rollback webapp-kustomize-prod revision_number
