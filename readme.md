@@ -68,6 +68,13 @@ argocd app create webapp-kustomize-prod \
 # Confirm the pods reflect the changes of the Sync
 - [x] kubectl get all -n prod
 
+# Get Details of argo CD Application
+- [x] argocd get argocd/webapp-kustomize-prod
+
+# Get Logs of argo CD Application
+- [x] argocd logs argocd/webapp-kustomize-prod
+
+
 # How to rollback
 - [x] argocd app history webapp-kustomize-prod
 - [x] argocd app rollback webapp-kustomize-prod revision_number
